@@ -9,12 +9,21 @@
 #import "CZTabBarController.h"
 #import "UIImage+Image.h"
 #import "CZTabBar.h"
-@interface CZTabBarController ()
-
+@interface CZTabBarController () <CZTabBarDelegate>
+@property (nonatomic,strong)NSMutableArray *items;
 @end
 
 @implementation CZTabBarController
 
+
+
+
+-(NSMutableArray *)items{
+    if (_items == nil) {
+        _items = [NSMutableArray array];
+    }
+    return _items;
+}
 
 //这个就是main的主控制器了,首要工作就是先把tabbar先做出来，回来再自定义
 - (void)viewDidLoad {
@@ -25,11 +34,21 @@
     
     
     [self setUpAllChildViewController];
-    CZTabBar *bar = [[CZTabBar alloc] initWithFrame:self.tabBar.frame];
-    [self setValue:bar forKeyPath:@"tabBar"];
-    
-    
+    [self setUpTabBar];
 }
+
+-(void)setUpTabBar{
+    CZTabBar *bar = [[CZTabBar alloc] initWithFrame:self.tabBar.frame];
+    bar.backgroundColor = [UIColor whiteColor];
+
+    bar.items = self.items;
+    bar.delegate = self;
+    [self.view addSubview:bar];
+    [self.tabBar removeFromSuperview];
+
+}
+
+
 
 -(void)setUpAllChildViewController
 {
@@ -44,7 +63,6 @@
     
     UIViewController *profile = [[UIViewController alloc] init];
     [self setUpOneChildViewController:profile name:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
-    
 }
 
 -(void)setUpOneChildViewController:(UIViewController *)vc name:(NSString *)name image:(NSString *)image selectedImage:(NSString *)selectedImage;
@@ -54,10 +72,15 @@
     vc.title = name;
     vc.tabBarItem.image = [UIImage imageWithOriginalName:image];
     vc.tabBarItem.selectedImage = [UIImage imageWithOriginalName:selectedImage];
-    [self addChildViewController:vc];
+    //[self addChildViewController:vc];
+    
+    [self.items addObject:vc.tabBarItem];
 }
 
-
+-(void)didClickButton:(UIButton *)btn
+{
+   // NSLog(@"%ld click",(long)btn.tag);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -8,10 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CZTabBar : UITabBar
+@class CZTabBar;
+
+@protocol CZTabBarDelegate <NSObject>
+
+@optional
+-(void)didClickButton:(UIButton *)btn;
+
+@end
 
 
 
+
+@interface CZTabBar : UIView
+
+@property (nonatomic,weak)NSArray *items;
+@property (nonatomic,weak)id <CZTabBarDelegate> delegate;
 
 
 

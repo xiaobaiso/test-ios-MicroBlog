@@ -7,11 +7,11 @@
 //
 
 #import "CZTabBar.h"
-
+#import "CZTabBarButton.h"
 @interface CZTabBar ()
-@property (nonatomic,strong)UIButton *selectedBtn;
-@property (nonatomic,strong)UIButton *plusButton;
-@property (nonatomic,strong)NSArray *buttons;
+@property (nonatomic,weak)UIButton *selectedBtn;
+@property (nonatomic,weak)UIButton *plusButton;
+@property (nonatomic,strong)NSMutableArray *buttons;
 @end
 
 
@@ -25,19 +25,51 @@
 }
 */
 
--(NSArray *)buttons{
+-(NSMutableArray *)buttons{
     if (_buttons == nil) {
         _buttons = [NSMutableArray array];
     }
     return _buttons;
 }
 
+-(void)setItems:(NSArray *)items
+{
+    _items = items;
+      for (UITabBarItem *item in _items) {
+        CZTabBarButton *btn = [CZTabBarButton buttonWithType:UIButtonTypeCustom];
+        btn.item = item;
+        btn.tag = self.buttons.count;
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        if (btn.tag == 0) {
+            [self btnClick:btn];
+        }
+        [self addSubview:btn];
+        [self.buttons addObject:btn];
+    }
+    
+}
+
+-(void)btnClick:(UIButton *)btn
+{
+    self.selectedBtn.selected = NO;
+    self.selectedBtn = btn;
+    self.selectedBtn.selected = YES;
+    
+    if ([self.delegate respondsToSelector:@selector(didClickButton:)]) {
+        [self.delegate didClickButton:btn];
+    }
+    
+}
+
+
+
+
 - (UIButton *)plusButton
 {
     if (_plusButton == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
+        [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
         [btn sizeToFit];
@@ -54,30 +86,22 @@
     CGFloat h = self.bounds.size.height;
     CGFloat btnW = w/(self.items.count + 1);
     CGFloat btnH = h;
- //   NSLog(@"zzz %d",self.items.count);
-         //   if ([tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
     int i = 0;
-    for (UIView *tabBarItem in self.subviews)
+    for (UIView *tabBarItem in self.buttons)
     {
-        if ([tabBarItem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+//        if ([tabBarItem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
             if (i == 2) {
                 i = 3;
             }
          
             tabBarItem.frame = CGRectMake(i*btnW, 0, btnW, btnH);
             i++;
-        }
+//        }
     }
-    
- //   NSLog(@"%d",i);
+
     self.plusButton.center = CGPointMake(0.5*w, 0.5*h);
     
 }
 
--(void)btnClick:(UIButton *)button
-{
-    
-    
-}
 
 @end
