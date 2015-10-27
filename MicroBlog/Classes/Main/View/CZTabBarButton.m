@@ -7,9 +7,10 @@
 //
 
 #import "CZTabBarButton.h"
-
+#import "CZBadgeView.h"
+#import "UIView+Frame.h"
 @interface CZTabBarButton ()
-
+@property (nonatomic,weak)CZBadgeView *badgeView;
 @end
 
 
@@ -22,11 +23,26 @@
     // Drawing code
 }
 */
+-(CZBadgeView *)badgeView
+{
+    if (_badgeView == nil) {
+        CZBadgeView *btn = [CZBadgeView buttonWithType:UIButtonTypeCustom];
+        [self addSubview:btn];
+        _badgeView = btn;
+        
+    }
+    return _badgeView;
+}
+
+
 -(void)setItem:(UITabBarItem *)item
 {
+    _item = item;
     [self setTitle:item.title forState:UIControlStateNormal];
     [self setImage:item.image forState:UIControlStateNormal];
     [self setImage:item.selectedImage forState:UIControlStateSelected];
+    self.badgeView.badgeValue = item.badgeValue;
+
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -57,6 +73,8 @@
     CGFloat titleH = self.bounds.size.height * 0.3;
     self.titleLabel.frame = CGRectMake(titleX, titleY, titleW, titleH);
     
+    self.badgeView.x = self.width - self.badgeView.width - 10;
+    self.badgeView.y = 0;
 }
 
 @end

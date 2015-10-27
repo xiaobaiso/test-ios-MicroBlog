@@ -73,7 +73,7 @@
     vc.tabBarItem.image = [UIImage imageWithOriginalName:image];
     vc.tabBarItem.selectedImage = [UIImage imageWithOriginalName:selectedImage];
     //[self addChildViewController:vc];
-    
+    vc.tabBarItem.badgeValue = @"ddddd";
     [self.items addObject:vc.tabBarItem];
 }
 

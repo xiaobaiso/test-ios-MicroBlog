@@ -10,6 +10,8 @@
 		032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E11BDF153A00E9C022 /* UIImage+Image.m */; };
 		032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E41BDF1AA800E9C022 /* CZTabBar.m */; };
 		032A19E81BDF4B6700E9C022 /* CZTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E71BDF4B6700E9C022 /* CZTabBarButton.m */; };
+		032A19EB1BDF682300E9C022 /* CZBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19EA1BDF682300E9C022 /* CZBadgeView.m */; };
+		032A19EE1BDF6C5D00E9C022 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19ED1BDF6C5D00E9C022 /* UIView+Frame.m */; };
 		03E6A0AB1BDE1AD6001060AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AA1BDE1AD6001060AA /* Images.xcassets */; };
 		03E6A0AE1BDE1AD6001060AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AC1BDE1AD6001060AA /* LaunchScreen.xib */; };
 		03E6A0BA1BDE1AD7001060AA /* MicroBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A0B91BDE1AD7001060AA /* MicroBlogTests.m */; };
@@ -36,6 +38,10 @@
 		032A19E41BDF1AA800E9C022 /* CZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBar.m; sourceTree = "<group>"; };
 		032A19E61BDF4B6700E9C022 /* CZTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarButton.h; sourceTree = "<group>"; };
 		032A19E71BDF4B6700E9C022 /* CZTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarButton.m; sourceTree = "<group>"; };
+		032A19E91BDF682300E9C022 /* CZBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZBadgeView.h; sourceTree = "<group>"; };
+		032A19EA1BDF682300E9C022 /* CZBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZBadgeView.m; sourceTree = "<group>"; };
+		032A19EC1BDF6C5D00E9C022 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		032A19ED1BDF6C5D00E9C022 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		03E6A09A1BDE1AD6001060AA /* MicroBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E6A0AA1BDE1AD6001060AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03E6A0AD1BDE1AD6001060AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 				032A19E41BDF1AA800E9C022 /* CZTabBar.m */,
 				032A19E61BDF4B6700E9C022 /* CZTabBarButton.h */,
 				032A19E71BDF4B6700E9C022 /* CZTabBarButton.m */,
+				032A19E91BDF682300E9C022 /* CZBadgeView.h */,
+				032A19EA1BDF682300E9C022 /* CZBadgeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +287,8 @@
 		03E6A1131BDE1F51001060AA /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				032A19EC1BDF6C5D00E9C022 /* UIView+Frame.h */,
+				032A19ED1BDF6C5D00E9C022 /* UIView+Frame.m */,
 				032A19E01BDF153A00E9C022 /* UIImage+Image.h */,
 				032A19E11BDF153A00E9C022 /* UIImage+Image.m */,
 			);
@@ -416,9 +426,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032A19EE1BDF6C5D00E9C022 /* UIView+Frame.m in Sources */,
 				03E6A11C1BDE1F51001060AA /* main.m in Sources */,
 				032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */,
 				032A19E81BDF4B6700E9C022 /* CZTabBarButton.m in Sources */,
+				032A19EB1BDF682300E9C022 /* CZBadgeView.m in Sources */,
 				03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */,
 				032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */,
 				03E6A11A1BDE1F51001060AA /* AppDelegate.m in Sources */,
