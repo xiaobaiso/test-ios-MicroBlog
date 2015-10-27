@@ -8,6 +8,7 @@
 
 #import "CZTabBarController.h"
 #import "UIImage+Image.h"
+#import "CZTabBar.h"
 @interface CZTabBarController ()
 
 @end
@@ -20,8 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setUpAllChildViewController];
+  //  UITabBarItem *item = [self.tabBarItem];
     
+    
+    [self setUpAllChildViewController];
+    CZTabBar *bar = [[CZTabBar alloc] initWithFrame:self.tabBar.frame];
+    [self setValue:bar forKeyPath:@"tabBar"];
     
     
 }
