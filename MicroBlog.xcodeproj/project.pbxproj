@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E11BDF153A00E9C022 /* UIImage+Image.m */; };
 		03E6A0AB1BDE1AD6001060AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AA1BDE1AD6001060AA /* Images.xcassets */; };
 		03E6A0AE1BDE1AD6001060AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AC1BDE1AD6001060AA /* LaunchScreen.xib */; };
 		03E6A0BA1BDE1AD7001060AA /* MicroBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A0B91BDE1AD7001060AA /* MicroBlogTests.m */; };
 		03E6A11A1BDE1F51001060AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A1121BDE1F51001060AA /* AppDelegate.m */; };
 		03E6A11B1BDE1F51001060AA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A1141BDE1F51001060AA /* Info.plist */; };
 		03E6A11C1BDE1F51001060AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A1151BDE1F51001060AA /* main.m */; };
+		03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A1241BDE21B8001060AA /* CZTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032A19E01BDF153A00E9C022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		032A19E11BDF153A00E9C022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		03E6A09A1BDE1AD6001060AA /* MicroBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E6A0AA1BDE1AD6001060AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03E6A0AD1BDE1AD6001060AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		03E6A1121BDE1F51001060AA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		03E6A1141BDE1F51001060AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03E6A1151BDE1F51001060AA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03E6A1231BDE21B8001060AA /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
+		03E6A1241BDE21B8001060AA /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,8 @@
 		03E6A1091BDE1F51001060AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				03E6A1231BDE21B8001060AA /* CZTabBarController.h */,
+				03E6A1241BDE21B8001060AA /* CZTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +269,8 @@
 		03E6A1131BDE1F51001060AA /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				032A19E01BDF153A00E9C022 /* UIImage+Image.h */,
+				032A19E11BDF153A00E9C022 /* UIImage+Image.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -397,6 +407,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E6A11C1BDE1F51001060AA /* main.m in Sources */,
+				032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */,
+				03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */,
 				03E6A11A1BDE1F51001060AA /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +602,7 @@
 				03E6A0BF1BDE1AD7001060AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03E6A0C01BDE1AD7001060AA /* Build configuration list for PBXNativeTarget "MicroBlogTests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +611,7 @@
 				03E6A0C21BDE1AD7001060AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
