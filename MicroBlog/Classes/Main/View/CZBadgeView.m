@@ -21,6 +21,7 @@
     if (self = [super initWithFrame:frame]) {
         self.userInteractionEnabled = NO;//关闭用户的触摸
         [self setBackgroundImage:[UIImage imageNamed:@"main_badge"] forState:UIControlStateNormal];
+        // 设置字体大小
         self.titleLabel.font = [UIFont systemFontOfSize:13];
         [self sizeToFit];
     }
@@ -29,6 +30,7 @@
 
 -(void)setBadgeValue:(NSString *)badgeValue{
     _badgeValue = badgeValue;
+    // 判断badgeValue是否有内容
     if (badgeValue.length == 0 || [badgeValue isEqualToString:@"0"]) {
         self.hidden = YES;
     }else{

@@ -35,8 +35,10 @@
 -(void)setItems:(NSArray *)items
 {
     _items = items;
+    // 遍历模型数组，创建对应tabBarButton
       for (UITabBarItem *item in _items) {
         CZTabBarButton *btn = [CZTabBarButton buttonWithType:UIButtonTypeCustom];
+        // 给按钮赋值模型，按钮的内容由模型对应决定
         btn.item = item;
         btn.tag = self.buttons.count;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -44,11 +46,13 @@
             [self btnClick:btn];
         }
         [self addSubview:btn];
+        // 把按钮添加到按钮数组
         [self.buttons addObject:btn];
     }
     
 }
 
+// 点击tabBarButton调用
 -(void)btnClick:(UIButton *)btn
 {
     self.selectedBtn.selected = NO;
@@ -72,6 +76,8 @@
         [btn setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
+        // 默认按钮的尺寸跟背景图片一样大
+        // sizeToFit:默认会根据按钮的背景图片或者image和文字计算出按钮的最合适的尺寸
         [btn sizeToFit];
         _plusButton = btn;
         [self addSubview:btn];
@@ -79,7 +85,8 @@
     return _plusButton;
 }
 
-
+// self.items UITabBarItem模型，有多少个子控制器就有多少个UITabBarItem模型
+// 调整子控件的位置
 -(void)layoutSubviews{
     [super layoutSubviews];
     CGFloat w = self.bounds.size.width;
@@ -87,6 +94,7 @@
     CGFloat btnW = w/(self.items.count + 1);
     CGFloat btnH = h;
     int i = 0;
+    // 设置tabBarButton的frame
     for (UIView *tabBarItem in self.buttons)
     {
 //        if ([tabBarItem isKindOfClass:NSClassFromString(@"UITabBarButton")]) {

@@ -53,39 +53,53 @@
 
 
 
--(void)setUpAllChildViewController
+
+- (void)setUpAllChildViewController
 {
+    // 首页
     UIViewController *home = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:home name:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
     
+    [self setUpOneChildViewController:home image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_home_selected"] title:@"首页"];
+
+    
+    
+    // 消息
     UIViewController *message = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:message name:@"信息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
+    [self setUpOneChildViewController:message image:[UIImage imageNamed:@"tabbar_message_center"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_message_center_selected"] title:@"消息"];
+
     
+    // 发现
     CZDiscoverViewController *discover = [[CZDiscoverViewController alloc] init];
-    [self setUpOneChildViewController:discover name:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
+    [self setUpOneChildViewController:discover image:[UIImage imageNamed:@"tabbar_discover"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_discover_selected"] title:@"发现"];
+
     
-    UIViewController *profile = [[UIViewController alloc] init];
-    [self setUpOneChildViewController:profile name:@"我" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+
+    // 我
+    CZDiscoverViewController *profile = [[CZDiscoverViewController alloc] init];
+    [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"tabbar_profile"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_profile_selected"] title:@"我"];
+
 }
 
--(void)setUpOneChildViewController:(UIViewController *)vc name:(NSString *)name image:(NSString *)image selectedImage:(NSString *)selectedImage;
+- (void)setUpOneChildViewController:(UIViewController *)vc image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title
 {
-    
-//    UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:name image:[UIImage imageNamed:image] selectedImage:[UIImage imageNamed:selectedImage]];
-    vc.title = name;
-    vc.tabBarItem.image = [UIImage imageWithOriginalName:image];
-    vc.tabBarItem.selectedImage = [UIImage imageWithOriginalName:selectedImage];
-    //[self addChildViewController:vc];
-//    vc.tabBarItem.badgeValue = @"d";
+    vc.title = title;
+    vc.tabBarItem.image = image;
+    vc.tabBarItem.selectedImage = selectedImage;
+    vc.tabBarItem.badgeValue = @"d";
+    // 保存tabBarItem模型到数组
     [self.items addObject:vc.tabBarItem];
     
-    CZNavigationController *navi = [[CZNavigationController alloc]initWithRootViewController:vc];
-    [self addChildViewController:navi];
+    //这个打开 下两行可以注释掉    下面这个函数做了较详细的解释
+//    [self addChildViewController:vc];
+    CZNavigationController *nav = [[CZNavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 
 -(void)didClickButton:(UIButton *)btn
 {
-   // NSLog(@"%ld click",(long)btn.tag);
+    //由于在APPDelegate中设置了根控制器是CZTabBarController,所以他的子视图就是在stroageboard的那里连线的对应代码就是 [self addChildViewController:vc];这样就可以了，但是我们又需要CZNavigationController在界面的上方，所以[self addChildViewController:nav];可以用来封装一下。selectedIndex就是指定显示哪个子控制器，这个数值是按照顺序加进去的。
+    self.selectedIndex = btn.tag;
+    
 }
 
 - (void)didReceiveMemoryWarning {
