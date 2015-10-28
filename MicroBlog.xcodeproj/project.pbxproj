@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031FE9731BE0B5E700D84EE5 /* CZSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE9721BE0B5E700D84EE5 /* CZSearchBar.m */; };
 		032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E11BDF153A00E9C022 /* UIImage+Image.m */; };
 		032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E41BDF1AA800E9C022 /* CZTabBar.m */; };
 		032A19E81BDF4B6700E9C022 /* CZTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E71BDF4B6700E9C022 /* CZTabBarButton.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031FE9711BE0B5E700D84EE5 /* CZSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSearchBar.h; sourceTree = "<group>"; };
+		031FE9721BE0B5E700D84EE5 /* CZSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSearchBar.m; sourceTree = "<group>"; };
 		032A19E01BDF153A00E9C022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		032A19E11BDF153A00E9C022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		032A19E31BDF1AA800E9C022 /* CZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBar.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 		03E6A1031BDE1F51001060AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				031FE9711BE0B5E700D84EE5 /* CZSearchBar.h */,
+				031FE9721BE0B5E700D84EE5 /* CZSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031FE9731BE0B5E700D84EE5 /* CZSearchBar.m in Sources */,
 				032A19EE1BDF6C5D00E9C022 /* UIView+Frame.m in Sources */,
 				03E6A11C1BDE1F51001060AA /* main.m in Sources */,
 				032A19F41BDF781000E9C022 /* CZDiscoverViewController.m in Sources */,
