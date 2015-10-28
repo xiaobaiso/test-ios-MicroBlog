@@ -9,6 +9,9 @@
 #import "CZTabBarController.h"
 #import "UIImage+Image.h"
 #import "CZTabBar.h"
+#import "CZNavigationController.h"
+
+#import "CZDiscoverViewController.h"
 @interface CZTabBarController () <CZTabBarDelegate>
 @property (nonatomic,strong)NSMutableArray *items;
 @end
@@ -58,7 +61,7 @@
     UIViewController *message = [[UIViewController alloc] init];
     [self setUpOneChildViewController:message name:@"信息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
     
-    UIViewController *discover = [[UIViewController alloc] init];
+    CZDiscoverViewController *discover = [[CZDiscoverViewController alloc] init];
     [self setUpOneChildViewController:discover name:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
     
     UIViewController *profile = [[UIViewController alloc] init];
@@ -73,8 +76,11 @@
     vc.tabBarItem.image = [UIImage imageWithOriginalName:image];
     vc.tabBarItem.selectedImage = [UIImage imageWithOriginalName:selectedImage];
     //[self addChildViewController:vc];
-    vc.tabBarItem.badgeValue = @"ddddd";
+//    vc.tabBarItem.badgeValue = @"d";
     [self.items addObject:vc.tabBarItem];
+    
+    CZNavigationController *navi = [[CZNavigationController alloc]initWithRootViewController:vc];
+    [self addChildViewController:navi];
 }
 
 -(void)didClickButton:(UIButton *)btn
