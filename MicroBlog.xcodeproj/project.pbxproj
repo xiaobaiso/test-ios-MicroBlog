@@ -22,6 +22,7 @@
 		03873B7A1BE1CC2500FAAB90 /* CZCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B791BE1CC2500FAAB90 /* CZCover.m */; };
 		03873B7D1BE1FDBB00FAAB90 /* CZPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B7C1BE1FDBB00FAAB90 /* CZPopMenu.m */; };
 		03873B801BE210CE00FAAB90 /* CZMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B7F1BE210CE00FAAB90 /* CZMessageViewController.m */; };
+		03873B831BE2140900FAAB90 /* CZProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B821BE2140900FAAB90 /* CZProfileViewController.m */; };
 		03E6A0AB1BDE1AD6001060AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AA1BDE1AD6001060AA /* Images.xcassets */; };
 		03E6A0AE1BDE1AD6001060AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AC1BDE1AD6001060AA /* LaunchScreen.xib */; };
 		03E6A0BA1BDE1AD7001060AA /* MicroBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A0B91BDE1AD7001060AA /* MicroBlogTests.m */; };
@@ -72,6 +73,8 @@
 		03873B7C1BE1FDBB00FAAB90 /* CZPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPopMenu.m; sourceTree = "<group>"; };
 		03873B7E1BE210CE00FAAB90 /* CZMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZMessageViewController.h; sourceTree = "<group>"; };
 		03873B7F1BE210CE00FAAB90 /* CZMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZMessageViewController.m; sourceTree = "<group>"; };
+		03873B811BE2140900FAAB90 /* CZProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZProfileViewController.h; sourceTree = "<group>"; };
+		03873B821BE2140900FAAB90 /* CZProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZProfileViewController.m; sourceTree = "<group>"; };
 		03E6A09A1BDE1AD6001060AA /* MicroBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E6A0AA1BDE1AD6001060AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03E6A0AD1BDE1AD6001060AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -358,6 +361,8 @@
 		03E6A1171BDE1F51001060AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				03873B811BE2140900FAAB90 /* CZProfileViewController.h */,
+				03873B821BE2140900FAAB90 /* CZProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				032A19EB1BDF682300E9C022 /* CZBadgeView.m in Sources */,
 				03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */,
 				032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */,
+				03873B831BE2140900FAAB90 /* CZProfileViewController.m in Sources */,
 				03E6A11A1BDE1F51001060AA /* AppDelegate.m in Sources */,
 				03873B801BE210CE00FAAB90 /* CZMessageViewController.m in Sources */,
 			);

@@ -14,6 +14,7 @@
 #import "CZHomeViewController.h"
 #import "CZDiscoverViewController.h"
 #import "CZMessageViewController.h"
+#import "CZProfileViewController.h"
 @interface CZTabBarController () <CZTabBarDelegate>
 @property (nonatomic,strong)NSMutableArray *items;
 @end
@@ -77,7 +78,7 @@
     
 
     // 我
-    CZDiscoverViewController *profile = [[CZDiscoverViewController alloc] init];
+    CZProfileViewController *profile = [[CZProfileViewController alloc] init];
     [self setUpOneChildViewController:profile image:[UIImage imageNamed:@"tabbar_profile"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_profile_selected"] title:@"我"];
 
 }
