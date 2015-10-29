@@ -11,6 +11,7 @@
 #import "CZTabBar.h"
 #import "CZNavigationController.h"
 
+#import "CZHomeViewController.h"
 #import "CZDiscoverViewController.h"
 @interface CZTabBarController () <CZTabBarDelegate>
 @property (nonatomic,strong)NSMutableArray *items;
@@ -57,7 +58,7 @@
 - (void)setUpAllChildViewController
 {
     // 首页
-    UIViewController *home = [[UIViewController alloc] init];
+    CZHomeViewController *home = [[CZHomeViewController alloc] init];
     
     [self setUpOneChildViewController:home image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_home_selected"] title:@"首页"];
 

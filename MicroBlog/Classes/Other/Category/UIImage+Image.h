@@ -11,5 +11,5 @@
 @interface UIImage (Image)
 
 +(instancetype)imageWithOriginalName:(NSString *)imageName;
-
++ (instancetype)imageWithStretchableName:(NSString *)imageName;
 @end

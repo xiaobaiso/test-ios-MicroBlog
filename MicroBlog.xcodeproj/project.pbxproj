@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		031FE9731BE0B5E700D84EE5 /* CZSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE9721BE0B5E700D84EE5 /* CZSearchBar.m */; };
+		031FE9761BE0BD2100D84EE5 /* CZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE9751BE0BD2100D84EE5 /* CZHomeViewController.m */; };
+		031FE9791BE0BD8500D84EE5 /* CZOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE9781BE0BD8500D84EE5 /* CZOneViewController.m */; };
+		031FE97C1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE97B1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.m */; };
+		031FE97F1BE0C37500D84EE5 /* CZTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 031FE97E1BE0C37500D84EE5 /* CZTitleButton.m */; };
 		032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E11BDF153A00E9C022 /* UIImage+Image.m */; };
 		032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E41BDF1AA800E9C022 /* CZTabBar.m */; };
 		032A19E81BDF4B6700E9C022 /* CZTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19E71BDF4B6700E9C022 /* CZTabBarButton.m */; };
@@ -15,6 +19,8 @@
 		032A19EE1BDF6C5D00E9C022 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19ED1BDF6C5D00E9C022 /* UIView+Frame.m */; };
 		032A19F11BDF752A00E9C022 /* CZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19F01BDF752A00E9C022 /* CZNavigationController.m */; };
 		032A19F41BDF781000E9C022 /* CZDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032A19F31BDF781000E9C022 /* CZDiscoverViewController.m */; };
+		03873B7A1BE1CC2500FAAB90 /* CZCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B791BE1CC2500FAAB90 /* CZCover.m */; };
+		03873B7D1BE1FDBB00FAAB90 /* CZPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 03873B7C1BE1FDBB00FAAB90 /* CZPopMenu.m */; };
 		03E6A0AB1BDE1AD6001060AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AA1BDE1AD6001060AA /* Images.xcassets */; };
 		03E6A0AE1BDE1AD6001060AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A0AC1BDE1AD6001060AA /* LaunchScreen.xib */; };
 		03E6A0BA1BDE1AD7001060AA /* MicroBlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A0B91BDE1AD7001060AA /* MicroBlogTests.m */; };
@@ -37,6 +43,14 @@
 /* Begin PBXFileReference section */
 		031FE9711BE0B5E700D84EE5 /* CZSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZSearchBar.h; sourceTree = "<group>"; };
 		031FE9721BE0B5E700D84EE5 /* CZSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZSearchBar.m; sourceTree = "<group>"; };
+		031FE9741BE0BD2100D84EE5 /* CZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHomeViewController.h; sourceTree = "<group>"; };
+		031FE9751BE0BD2100D84EE5 /* CZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHomeViewController.m; sourceTree = "<group>"; };
+		031FE9771BE0BD8500D84EE5 /* CZOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZOneViewController.h; sourceTree = "<group>"; };
+		031FE9781BE0BD8500D84EE5 /* CZOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZOneViewController.m; sourceTree = "<group>"; };
+		031FE97A1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		031FE97B1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
+		031FE97D1BE0C37500D84EE5 /* CZTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTitleButton.h; sourceTree = "<group>"; };
+		031FE97E1BE0C37500D84EE5 /* CZTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTitleButton.m; sourceTree = "<group>"; };
 		032A19E01BDF153A00E9C022 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		032A19E11BDF153A00E9C022 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		032A19E31BDF1AA800E9C022 /* CZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBar.h; sourceTree = "<group>"; };
@@ -51,6 +65,10 @@
 		032A19F01BDF752A00E9C022 /* CZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNavigationController.m; sourceTree = "<group>"; };
 		032A19F21BDF781000E9C022 /* CZDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZDiscoverViewController.h; sourceTree = "<group>"; };
 		032A19F31BDF781000E9C022 /* CZDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZDiscoverViewController.m; sourceTree = "<group>"; };
+		03873B781BE1CC2500FAAB90 /* CZCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZCover.h; sourceTree = "<group>"; };
+		03873B791BE1CC2500FAAB90 /* CZCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZCover.m; sourceTree = "<group>"; };
+		03873B7B1BE1FDBB00FAAB90 /* CZPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZPopMenu.h; sourceTree = "<group>"; };
+		03873B7C1BE1FDBB00FAAB90 /* CZPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZPopMenu.m; sourceTree = "<group>"; };
 		03E6A09A1BDE1AD6001060AA /* MicroBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E6A0AA1BDE1AD6001060AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03E6A0AD1BDE1AD6001060AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -197,6 +215,10 @@
 		03E6A1051BDE1F51001060AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				031FE9741BE0BD2100D84EE5 /* CZHomeViewController.h */,
+				031FE9751BE0BD2100D84EE5 /* CZHomeViewController.m */,
+				031FE9771BE0BD8500D84EE5 /* CZOneViewController.h */,
+				031FE9781BE0BD8500D84EE5 /* CZOneViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +233,12 @@
 		03E6A1071BDE1F51001060AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				031FE97D1BE0C37500D84EE5 /* CZTitleButton.h */,
+				031FE97E1BE0C37500D84EE5 /* CZTitleButton.m */,
+				03873B781BE1CC2500FAAB90 /* CZCover.h */,
+				03873B791BE1CC2500FAAB90 /* CZCover.m */,
+				03873B7B1BE1FDBB00FAAB90 /* CZPopMenu.h */,
+				03873B7C1BE1FDBB00FAAB90 /* CZPopMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +334,8 @@
 				032A19ED1BDF6C5D00E9C022 /* UIView+Frame.m */,
 				032A19E01BDF153A00E9C022 /* UIImage+Image.h */,
 				032A19E11BDF153A00E9C022 /* UIImage+Image.m */,
+				031FE97A1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.h */,
+				031FE97B1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -441,12 +471,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03873B7A1BE1CC2500FAAB90 /* CZCover.m in Sources */,
 				031FE9731BE0B5E700D84EE5 /* CZSearchBar.m in Sources */,
 				032A19EE1BDF6C5D00E9C022 /* UIView+Frame.m in Sources */,
 				03E6A11C1BDE1F51001060AA /* main.m in Sources */,
 				032A19F41BDF781000E9C022 /* CZDiscoverViewController.m in Sources */,
 				032A19E21BDF153A00E9C022 /* UIImage+Image.m in Sources */,
+				031FE97C1BE0BF0E00D84EE5 /* UIBarButtonItem+Item.m in Sources */,
 				032A19E81BDF4B6700E9C022 /* CZTabBarButton.m in Sources */,
+				031FE9791BE0BD8500D84EE5 /* CZOneViewController.m in Sources */,
+				03873B7D1BE1FDBB00FAAB90 /* CZPopMenu.m in Sources */,
+				031FE97F1BE0C37500D84EE5 /* CZTitleButton.m in Sources */,
+				031FE9761BE0BD2100D84EE5 /* CZHomeViewController.m in Sources */,
 				032A19F11BDF752A00E9C022 /* CZNavigationController.m in Sources */,
 				032A19EB1BDF682300E9C022 /* CZBadgeView.m in Sources */,
 				03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */,
