@@ -13,6 +13,7 @@
 
 #import "CZHomeViewController.h"
 #import "CZDiscoverViewController.h"
+#import "CZMessageViewController.h"
 @interface CZTabBarController () <CZTabBarDelegate>
 @property (nonatomic,strong)NSMutableArray *items;
 @end
@@ -65,7 +66,7 @@
     
     
     // 消息
-    UIViewController *message = [[UIViewController alloc] init];
+    CZMessageViewController *message = [[CZMessageViewController alloc] init];
     [self setUpOneChildViewController:message image:[UIImage imageNamed:@"tabbar_message_center"] selectedImage:[UIImage imageWithOriginalName:@"tabbar_message_center_selected"] title:@"消息"];
 
     
