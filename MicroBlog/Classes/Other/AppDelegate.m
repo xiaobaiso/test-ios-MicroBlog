@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CZTabBarController.h"
+#import "CZNewFeatureController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,8 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    CZTabBarController *tabBarVc = [[CZTabBarController alloc]init];
-    self.window.rootViewController = tabBarVc;
+    
+    //CZTabBarController *tabBarVc = [[CZTabBarController alloc]init];
+    CZNewFeatureController *newFeature = [[CZNewFeatureController alloc] init];
+    self.window.rootViewController = newFeature;
     [self.window makeKeyAndVisible];
     return YES;
 }

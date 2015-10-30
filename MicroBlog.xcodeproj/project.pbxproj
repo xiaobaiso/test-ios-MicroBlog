@@ -30,6 +30,8 @@
 		03E6A11B1BDE1F51001060AA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E6A1141BDE1F51001060AA /* Info.plist */; };
 		03E6A11C1BDE1F51001060AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A1151BDE1F51001060AA /* main.m */; };
 		03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6A1241BDE21B8001060AA /* CZTabBarController.m */; };
+		03FF26DB1BE355D10092B77E /* CZNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FF26DA1BE355D10092B77E /* CZNewFeatureController.m */; };
+		03FF26DE1BE358A00092B77E /* CZNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FF26DD1BE358A00092B77E /* CZNewFeatureCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,10 @@
 		03E6A1151BDE1F51001060AA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		03E6A1231BDE21B8001060AA /* CZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTabBarController.h; sourceTree = "<group>"; };
 		03E6A1241BDE21B8001060AA /* CZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTabBarController.m; sourceTree = "<group>"; };
+		03FF26D91BE355D10092B77E /* CZNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNewFeatureController.h; sourceTree = "<group>"; };
+		03FF26DA1BE355D10092B77E /* CZNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNewFeatureController.m; sourceTree = "<group>"; };
+		03FF26DC1BE358A00092B77E /* CZNewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNewFeatureCell.h; sourceTree = "<group>"; };
+		03FF26DD1BE358A00092B77E /* CZNewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNewFeatureCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 		03E6A0FF1BDE1F51001060AA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				03FF26D51BE355370092B77E /* NewFeature(新特性) */,
 				03E6A1001BDE1F51001060AA /* Discover(发现) */,
 				03E6A1041BDE1F51001060AA /* Home(首页) */,
 				03E6A1081BDE1F51001060AA /* Main */,
@@ -381,6 +388,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		03FF26D51BE355370092B77E /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				03FF26D61BE355960092B77E /* Controller */,
+				03FF26D71BE355960092B77E /* Model */,
+				03FF26D81BE355960092B77E /* View */,
+			);
+			path = "NewFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		03FF26D61BE355960092B77E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03FF26D91BE355D10092B77E /* CZNewFeatureController.h */,
+				03FF26DA1BE355D10092B77E /* CZNewFeatureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		03FF26D71BE355960092B77E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03FF26D81BE355960092B77E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03FF26DC1BE358A00092B77E /* CZNewFeatureCell.h */,
+				03FF26DD1BE358A00092B77E /* CZNewFeatureCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,11 +537,13 @@
 				031FE9761BE0BD2100D84EE5 /* CZHomeViewController.m in Sources */,
 				032A19F11BDF752A00E9C022 /* CZNavigationController.m in Sources */,
 				032A19EB1BDF682300E9C022 /* CZBadgeView.m in Sources */,
+				03FF26DB1BE355D10092B77E /* CZNewFeatureController.m in Sources */,
 				03E6A1251BDE21B8001060AA /* CZTabBarController.m in Sources */,
 				032A19E51BDF1AA800E9C022 /* CZTabBar.m in Sources */,
 				03873B831BE2140900FAAB90 /* CZProfileViewController.m in Sources */,
 				03E6A11A1BDE1F51001060AA /* AppDelegate.m in Sources */,
 				03873B801BE210CE00FAAB90 /* CZMessageViewController.m in Sources */,
+				03FF26DE1BE358A00092B77E /* CZNewFeatureCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
