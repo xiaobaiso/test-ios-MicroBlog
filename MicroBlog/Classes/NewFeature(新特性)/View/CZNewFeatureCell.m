@@ -7,7 +7,7 @@
 //
 
 #import "CZNewFeatureCell.h"
-
+#import "CZTabBarController.h"
 @interface CZNewFeatureCell ()
 @property (nonatomic,strong)UIImageView *imageView;
 @property (nonatomic,weak)UIButton *shareButton;
@@ -51,11 +51,15 @@
 -(void)start
 {
     NSLog(@"now start");
-}
+    CZTabBarController *controller = [[CZTabBarController alloc] init];
+    
+    [UIApplication sharedApplication].keyWindow.rootViewController = controller;
+
+    }
 
 - (void)setIndexPath:(NSInteger )indexPath count:(int)count
 {
-    NSLog(@"%d  %d ",indexPath,count);
+
     if (indexPath + 1 == count) {
         self.startButton.hidden = NO;
         self.shareButton.hidden = NO;
