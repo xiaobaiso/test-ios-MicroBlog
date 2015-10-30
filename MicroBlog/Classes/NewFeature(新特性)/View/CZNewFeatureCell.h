@@ -10,4 +10,5 @@
 
 @interface CZNewFeatureCell : UICollectionViewCell
 @property (nonatomic,copy)NSString *image;
+- (void)setIndexPath:(NSInteger )indexPath count:(int)count;
 @end

@@ -9,7 +9,7 @@
 #import "CZNewFeatureController.h"
 #import "CZNewFeatureCell.h"
 @interface CZNewFeatureController ()
-
+@property (nonatomic,strong)UIPageControl *control;
 @end
 
 @implementation CZNewFeatureController
@@ -21,7 +21,6 @@ static NSString * const reuseIdentifier = @"cell";
     layout.itemSize = [UIScreen mainScreen].bounds.size;
     layout.minimumLineSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        NSLog(@"eee");
     return [super initWithCollectionViewLayout:layout];
 }
 
@@ -39,7 +38,27 @@ static NSString * const reuseIdentifier = @"cell";
     self.collectionView.bounces = NO;//不可以拉出超出区域的位置
     self.collectionView.showsHorizontalScrollIndicator = NO;//这个就是滚动条吧 话说这个类是继承了scrollView
     // Do any additional setup after loading the view.
+    [self setUpPageControl];
 }
+
+
+- (void)setUpPageControl
+{
+    UIPageControl *control = [[UIPageControl alloc] init];
+    control.numberOfPages = 4;
+    control.pageIndicatorTintColor = [UIColor blackColor];
+    control.currentPageIndicatorTintColor = [UIColor redColor];
+    control.center = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height * 0.99);
+    _control = control;
+    [self.view addSubview:control];
+}
+
+// 只要一滚动就会调用
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.control.currentPage = scrollView.contentOffset.x / scrollView.frame.size.width + 0.5;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,6 +92,8 @@ static NSString * const reuseIdentifier = @"cell";
     CZNewFeatureCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     cell.image = [NSString stringWithFormat:@"new_feature_%ld",indexPath.row + 1];
+    [cell setIndexPath:indexPath.row count:4];
+    
     
     return cell;
 }
